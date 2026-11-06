@@ -1,0 +1,32 @@
+# Copy to .github/workflows/ci.yml. Runs backend tests + frontend build on every push; builds & pushes images to OCIR on main.
+name: ci
+on: { push: { branches: [main] }, pull_request: {} }
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -r backend/requirements-dev.txt
+      - run: cd backend && pytest -q
+      - run: cd backend && DATABASE_URL=sqlite:///ci.db alembic upgrade head && DATABASE_URL=sqlite:///ci.db alembic check
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm, cache-dependency-path: frontend/package-lock.json }
+      - run: cd frontend && npm ci && npm run build
+  images:
+    if: github.ref == 'refs/heads/main'
+    needs: [backend, frontend]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Login to OCIR
+        run: echo "${{ secrets.OCIR_TOKEN }}" | docker login ${{ secrets.OCIR_REGION }}.ocir.io -u "${{ secrets.OCIR_USER }}" --password-stdin
+      - run: |
+          R=${{ secrets.OCIR_REGION }}.ocir.io/${{ secrets.OCI_NAMESPACE }}/msea
+          docker build -t $R/api:${{ github.sha }} backend && docker push $R/api:${{ github.sha }}
+          docker build -t $R/web:${{ github.sha }} frontend && docker push $R/web:${{ github.sha }}

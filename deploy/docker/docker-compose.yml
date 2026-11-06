@@ -1,0 +1,29 @@
+# Local / single-VM deployment. On OCI the `db` service is replaced by MySQL HeatWave DB System (see deploy/oci).
+# usage: cd deploy/docker && cp ../../backend/.env.example .env && docker compose up -d --build
+services:
+  db:
+    image: mysql:8.4
+    environment: { MYSQL_ROOT_PASSWORD: rootpass, MYSQL_DATABASE: msea, MYSQL_USER: msea, MYSQL_PASSWORD: msea }
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_0900_ai_ci
+    volumes: [ "dbdata:/var/lib/mysql" ]
+    healthcheck: { test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-prootpass"], interval: 10s, retries: 10 }
+  api:
+    build: ../../backend
+    env_file: .env
+    environment: { DATABASE_URL: "mysql+pymysql://msea:msea@db:3306/msea?charset=utf8mb4", SCHEDULER_ENABLED: "0" }
+    depends_on: { db: { condition: service_healthy } }
+    volumes: [ "uploads:/var/msea/uploads" ]
+    restart: unless-stopped
+  scheduler:
+    build: ../../backend
+    env_file: .env
+    environment: { DATABASE_URL: "mysql+pymysql://msea:msea@db:3306/msea?charset=utf8mb4", SCHEDULER_ENABLED: "1", GUNICORN_WORKERS: "1", GUNICORN_THREADS: "2" }
+    command: sh -c "gunicorn -c gunicorn.conf.py --bind 127.0.0.1:8001 wsgi:app"
+    depends_on: [ api ]
+    restart: unless-stopped
+  web:
+    build: ../../frontend
+    ports: [ "80:80" ]
+    depends_on: [ api ]
+    restart: unless-stopped
+volumes: { dbdata: {}, uploads: {} }

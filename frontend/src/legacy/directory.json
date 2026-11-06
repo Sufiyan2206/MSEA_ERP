@@ -1,0 +1,1107 @@
+[
+ {
+  "group": "My Day",
+  "items": [
+   {
+    "key": "myday",
+    "label": "My Day",
+    "mod": "myday"
+   }
+  ]
+ },
+ {
+  "group": "Strength & admissions",
+  "items": [
+   {
+    "key": "exec",
+    "label": "Executive dashboard",
+    "mod": "exec"
+   },
+   {
+    "key": "strength",
+    "label": "Strength, target & capacity",
+    "mod": "strength"
+   },
+   {
+    "key": "cancel",
+    "label": "Cancellations & withdrawals",
+    "mod": "cancel"
+   },
+   {
+    "key": "targets",
+    "label": "Target planning",
+    "mod": "targets"
+   },
+   {
+    "key": "capacity",
+    "label": "Capacity setup",
+    "mod": "capacity"
+   },
+   {
+    "key": "admplan",
+    "label": "Admission plan",
+    "mod": "admplan"
+   },
+   {
+    "key": "students",
+    "label": "Student Corner",
+    "mod": "students"
+   },
+   {
+    "key": "revenue",
+    "label": "Revenue & collection",
+    "mod": "revenue"
+   },
+   {
+    "key": "compare",
+    "label": "Multi-year comparison",
+    "mod": "compare"
+   }
+  ]
+ },
+ {
+  "group": "Fee collection",
+  "items": [
+   {
+    "key": "corp",
+    "label": "Corporate dashboard",
+    "mod": "corp"
+   },
+   {
+    "key": "gaps",
+    "label": "Gap Analysis Center",
+    "mod": "gap"
+   },
+   {
+    "key": "tasks",
+    "label": "Task & approval center",
+    "mod": "tasks"
+   },
+   {
+    "key": "automation",
+    "label": "Automation center",
+    "mod": "gap"
+   },
+   {
+    "key": "rbuild",
+    "label": "Report builder",
+    "mod": "email"
+   },
+   {
+    "key": "dashboard",
+    "label": "Collections dashboard",
+    "mod": "dashboard"
+   },
+   {
+    "key": "daily",
+    "label": "Daily collection",
+    "mod": "daily"
+   },
+   {
+    "key": "target",
+    "label": "Monthly collection target",
+    "mod": "target"
+   },
+   {
+    "key": "instalment",
+    "label": "Instalment dues",
+    "mod": "instalment"
+   },
+   {
+    "key": "billing",
+    "label": "Billing",
+    "mod": "instalment"
+   },
+   {
+    "key": "collections",
+    "label": "Collections desk",
+    "mod": "cdk"
+   },
+   {
+    "key": "onlinepay",
+    "label": "Online payments",
+    "mod": "opay"
+   },
+   {
+    "key": "feestruct",
+    "label": "Fee structure",
+    "mod": "fst"
+   },
+   {
+    "key": "iplans",
+    "label": "Instalment plans",
+    "mod": "iplan"
+   },
+   {
+    "key": "refunds",
+    "label": "Refunds & concessions",
+    "mod": "rfc"
+   },
+   {
+    "key": "reminders",
+    "label": "Fee reminders",
+    "mod": "fdm"
+   },
+   {
+    "key": "cashctl",
+    "label": "Cash control",
+    "mod": "cch"
+   },
+   {
+    "key": "zeropayer",
+    "label": "Zero payers",
+    "mod": "zeropayer"
+   },
+   {
+    "key": "alerts",
+    "label": "Alerts",
+    "mod": "alerts"
+   },
+   {
+    "key": "exceptions",
+    "label": "Exceptions",
+    "mod": "exceptions"
+   },
+   {
+    "key": "email",
+    "label": "Email reports",
+    "mod": "email"
+   }
+  ]
+ },
+ {
+  "group": "Finance",
+  "items": [
+   {
+    "key": "fn_home",
+    "label": "Finance control centre",
+    "mod": "fn_home"
+   },
+   {
+    "key": "fn_gl",
+    "label": "General ledger",
+    "mod": "fn_gl"
+   },
+   {
+    "key": "fn_ar",
+    "label": "Accounts receivable",
+    "mod": "fn_ar"
+   },
+   {
+    "key": "fn_ap",
+    "label": "Accounts payable",
+    "mod": "fn_ap"
+   },
+   {
+    "key": "fn_bank",
+    "label": "Cash management",
+    "mod": "fn_bank"
+   },
+   {
+    "key": "fn_budget",
+    "label": "Budget & cost control",
+    "mod": "fn_budget"
+   },
+   {
+    "key": "intercompany",
+    "label": "Inter-company",
+    "mod": "icoy"
+   },
+   {
+    "key": "fn_reports",
+    "label": "Financial reports",
+    "mod": "fn_reports"
+   },
+   {
+    "key": "settings",
+    "label": "Targets & instalments",
+    "mod": "settings"
+   },
+   {
+    "key": "approvals",
+    "label": "Approvals",
+    "mod": "approvals"
+   },
+   {
+    "key": "import",
+    "label": "Data import",
+    "mod": "import"
+   },
+   {
+    "key": "rm_home",
+    "label": "Rent management",
+    "mod": "rm_home"
+   },
+   {
+    "key": "rm_master",
+    "label": "Rent master",
+    "mod": "rm_master"
+   },
+   {
+    "key": "rm_entries",
+    "label": "Monthly rent processing",
+    "mod": "rm_entries"
+   },
+   {
+    "key": "rm_ledger",
+    "label": "Rent accounting & payments",
+    "mod": "rm_ledger"
+   },
+   {
+    "key": "rm_import",
+    "label": "Rent – Tally import",
+    "mod": "rm_import"
+   },
+   {
+    "key": "rm_reports",
+    "label": "Rent reports",
+    "mod": "rm_reports"
+   }
+  ]
+ },
+ {
+  "group": "SRF incentives",
+  "items": [
+   {
+    "key": "srf_dashboard",
+    "label": "SRF dashboard",
+    "mod": "srf"
+   },
+   {
+    "key": "srf_submission",
+    "label": "SRF request",
+    "mod": "srf"
+   },
+   {
+    "key": "srf_verification",
+    "label": "Verification",
+    "mod": "srf"
+   },
+   {
+    "key": "srf_payment",
+    "label": "Payments",
+    "mod": "srf"
+   },
+   {
+    "key": "srf_policy",
+    "label": "Incentive policy",
+    "mod": ""
+   },
+   {
+    "key": "srf_reports",
+    "label": "SRF reports",
+    "mod": "srf"
+   },
+   {
+    "key": "srf_spec",
+    "label": "Help & specification",
+    "mod": ""
+   }
+  ]
+ },
+ {
+  "group": "Store & purchase",
+  "items": [
+   {
+    "key": "pr_home",
+    "label": "Store & purchase dashboard",
+    "mod": "pr_home"
+   },
+   {
+    "key": "pr_inbox",
+    "label": "Approvals inbox",
+    "mod": "pr_inbox"
+   },
+   {
+    "key": "pr_mr",
+    "label": "Material requests",
+    "mod": "pr_mr"
+   },
+   {
+    "key": "pr_pr",
+    "label": "Purchase requests",
+    "mod": "pr_pr"
+   },
+   {
+    "key": "pr_store",
+    "label": "Store & inventory",
+    "mod": "pr_store"
+   },
+   {
+    "key": "pr_vendors",
+    "label": "Vendors & quotations",
+    "mod": "pr_vendors"
+   },
+   {
+    "key": "pr_po",
+    "label": "Purchase orders",
+    "mod": "pr_po"
+   },
+   {
+    "key": "pr_budget",
+    "label": "Budget & finance",
+    "mod": "pr_budget"
+   },
+   {
+    "key": "pr_reports",
+    "label": "Store & purchase reports",
+    "mod": "pr_reports"
+   }
+  ]
+ },
+ {
+  "group": "Asset management",
+  "items": [
+   {
+    "key": "as_home",
+    "label": "Asset dashboard",
+    "mod": "as_home"
+   },
+   {
+    "key": "as_register",
+    "label": "Asset register",
+    "mod": "as_register"
+   },
+   {
+    "key": "as_alloc",
+    "label": "Allocation & returns",
+    "mod": "as_alloc"
+   },
+   {
+    "key": "as_transfer",
+    "label": "Transfers",
+    "mod": "as_transfer"
+   },
+   {
+    "key": "as_maint",
+    "label": "Maintenance, warranty & AMC",
+    "mod": "as_maint"
+   },
+   {
+    "key": "as_verify",
+    "label": "Verification & audit",
+    "mod": "as_verify"
+   },
+   {
+    "key": "as_incidents",
+    "label": "Missing, damaged & disposal",
+    "mod": "as_incidents"
+   },
+   {
+    "key": "as_finance",
+    "label": "Fixed assets & depreciation",
+    "mod": "as_finance"
+   },
+   {
+    "key": "as_requests",
+    "label": "Asset requests",
+    "mod": "as_requests"
+   },
+   {
+    "key": "as_reports",
+    "label": "Asset reports",
+    "mod": "as_reports"
+   }
+  ]
+ },
+ {
+  "group": "Petty cash",
+  "items": [
+   {
+    "key": "cb_home",
+    "label": "Petty cash dashboard",
+    "mod": "cb_home"
+   },
+   {
+    "key": "cb_day",
+    "label": "Daily cash book",
+    "mod": "cb_day"
+   },
+   {
+    "key": "cb_vouchers",
+    "label": "Expense vouchers",
+    "mod": "cb_vouchers"
+   },
+   {
+    "key": "cb_advances",
+    "label": "Advances & reimbursements",
+    "mod": "cb_advances"
+   },
+   {
+    "key": "cb_replenish",
+    "label": "Replenishment",
+    "mod": "cb_replenish"
+   },
+   {
+    "key": "cb_reports",
+    "label": "Petty cash reports",
+    "mod": "cb_reports"
+   }
+  ]
+ },
+ {
+  "group": "Utilities",
+  "items": [
+   {
+    "key": "ut_home",
+    "label": "Utilities dashboard",
+    "mod": "ut_home"
+   },
+   {
+    "key": "ut_conns",
+    "label": "Connections",
+    "mod": "ut_conns"
+   },
+   {
+    "key": "ut_bills",
+    "label": "Bills & payments",
+    "mod": "ut_bills"
+   },
+   {
+    "key": "ut_meters",
+    "label": "Meters, water & tankers",
+    "mod": "ut_meters"
+   },
+   {
+    "key": "ut_ptax",
+    "label": "Property tax",
+    "mod": "ut_ptax"
+   },
+   {
+    "key": "ut_rent",
+    "label": "Rent & leases",
+    "mod": "ut_rent"
+   },
+   {
+    "key": "ut_tickets",
+    "label": "Complaints & renewals",
+    "mod": "ut_tickets"
+   },
+   {
+    "key": "ut_reports",
+    "label": "Utilities reports",
+    "mod": "ut_reports"
+   }
+  ]
+ },
+ {
+  "group": "Bank reconciliation",
+  "items": [
+   {
+    "key": "br_home",
+    "label": "Reconciliation dashboard",
+    "mod": "br_home"
+   },
+   {
+    "key": "br_recon",
+    "label": "Direct reconciliation",
+    "mod": "br_recon"
+   },
+   {
+    "key": "br_fees",
+    "label": "Fee collection reconciliation",
+    "mod": "br_fees"
+   },
+   {
+    "key": "br_bulk",
+    "label": "Bulk payment reconciliation",
+    "mod": "br_bulk"
+   },
+   {
+    "key": "br_import",
+    "label": "Statements & import",
+    "mod": "br_import"
+   },
+   {
+    "key": "br_accounts",
+    "label": "Bank account master",
+    "mod": "br_accounts"
+   },
+   {
+    "key": "br_reports",
+    "label": "BRS & reports",
+    "mod": "br_reports"
+   }
+  ]
+ },
+ {
+  "group": "Human Resources",
+  "items": [
+   {
+    "key": "hr_home",
+    "label": "HR dashboard",
+    "mod": "hr_home"
+   },
+   {
+    "key": "hr_ess",
+    "label": "Self-service",
+    "mod": "hr_ess"
+   },
+   {
+    "key": "hr_roster",
+    "label": "Shift roster",
+    "mod": "rost"
+   },
+   {
+    "key": "hr_emp",
+    "label": "Employee master",
+    "mod": "hr_emp"
+   },
+   {
+    "key": "hr_prf",
+    "label": "Staff requirement (PRF)",
+    "mod": "hr_prf"
+   },
+   {
+    "key": "hr_recruit",
+    "label": "Recruitment & ATS",
+    "mod": "hr_recruit"
+   },
+   {
+    "key": "hr_onboard",
+    "label": "Onboarding & confirmation",
+    "mod": "hr_onboard"
+   },
+   {
+    "key": "hr_att",
+    "label": "Attendance & shifts",
+    "mod": "hr_att"
+   },
+   {
+    "key": "hr_leave",
+    "label": "Leave & holidays",
+    "mod": "hr_leave"
+   },
+   {
+    "key": "hr_pms",
+    "label": "Performance",
+    "mod": "hr_pms"
+   },
+   {
+    "key": "hr_train",
+    "label": "Training & CPT",
+    "mod": "hr_train"
+   },
+   {
+    "key": "hr_exit",
+    "label": "Separation & exit",
+    "mod": "hr_exit"
+   },
+   {
+    "key": "hr_comp",
+    "label": "Grievance, discipline & compliance",
+    "mod": "hr_comp"
+   },
+   {
+    "key": "hr_reports",
+    "label": "HR reports",
+    "mod": "hr_reports"
+   }
+  ]
+ },
+ {
+  "group": "Maintenance Management",
+  "items": [
+   {
+    "key": "mm_home",
+    "label": "Maintenance Management",
+    "mod": "mm_home"
+   },
+   {
+    "key": "tc_app",
+    "label": "Technician App",
+    "mod": "tc_app"
+   },
+   {
+    "key": "mm_app",
+    "label": "Maintenance Manager App",
+    "mod": "tcm_app"
+   },
+   {
+    "key": "tcv_home",
+    "label": "Technician Conveyance & Daily Work Report",
+    "mod": "tcv_home"
+   }
+  ]
+ },
+ {
+  "group": "Student information",
+  "items": [
+   {
+    "key": "sis",
+    "label": "Student information system",
+    "mod": "sis"
+   },
+   {
+    "key": "certs",
+    "label": "Certificates & ID cards",
+    "mod": "crt"
+   },
+   {
+    "key": "moves",
+    "label": "Student moves",
+    "mod": "smv"
+   },
+   {
+    "key": "helpdesk",
+    "label": "Parent help desk",
+    "mod": "ptk"
+   }
+  ]
+ },
+ {
+  "group": "Academics",
+  "items": [
+   {
+    "key": "teach",
+    "label": "Teach (smart classroom)",
+    "mod": "scl"
+   },
+   {
+    "key": "content",
+    "label": "Content library",
+    "mod": "scl"
+   },
+   {
+    "key": "devices",
+    "label": "Classroom devices & sync",
+    "mod": "sdev"
+   },
+   {
+    "key": "acdash",
+    "label": "Academic dashboards",
+    "mod": "acpl"
+   },
+   {
+    "key": "acad",
+    "label": "Academic management",
+    "mod": "acad"
+   },
+   {
+    "key": "acplan",
+    "label": "Academic planning",
+    "mod": "acpl"
+   },
+   {
+    "key": "attendance",
+    "label": "Student attendance",
+    "mod": "att"
+   },
+   {
+    "key": "tapp",
+    "label": "Teacher app",
+    "mod": "tapp"
+   },
+   {
+    "key": "portal",
+    "label": "Parent & Student app",
+    "mod": "portal"
+   },
+   {
+    "key": "lms",
+    "label": "Learning management",
+    "mod": "lms"
+   },
+   {
+    "key": "exam",
+    "label": "Examinations",
+    "mod": "exam"
+   },
+   {
+    "key": "house",
+    "label": "House system",
+    "mod": "house"
+   },
+   {
+    "key": "meet",
+    "label": "Meetings",
+    "mod": "meet"
+   },
+   {
+    "key": "consent",
+    "label": "Parent consents",
+    "mod": "consent"
+   },
+   {
+    "key": "tac",
+    "label": "Teacher academy & policies",
+    "mod": "tac"
+   },
+   {
+    "key": "lrc",
+    "label": "Outcomes & report cards",
+    "mod": "lrc"
+   },
+   {
+    "key": "qps",
+    "label": "Question paper security",
+    "mod": "qps"
+   },
+   {
+    "key": "lib",
+    "label": "Library",
+    "mod": "lib"
+   },
+   {
+    "key": "smk",
+    "label": "Smart classroom & kits",
+    "mod": "smk"
+   },
+   {
+    "key": "cur",
+    "label": "Curriculum master",
+    "mod": "cur"
+   },
+   {
+    "key": "fbp",
+    "label": "Foundation & board prep",
+    "mod": "fbp"
+   },
+   {
+    "key": "hostel",
+    "label": "Hostel & mess",
+    "mod": "hml"
+   },
+   {
+    "key": "transport",
+    "label": "Transport",
+    "mod": "tnp"
+   },
+   {
+    "key": "alumni",
+    "label": "Alumni & placements",
+    "mod": "alm"
+   },
+   {
+    "key": "rollover",
+    "label": "Backup & year-end",
+    "mod": "rov"
+   }
+  ]
+ },
+ {
+  "group": "Planner",
+  "items": [
+   {
+    "key": "cal",
+    "label": "Calendar & planner",
+    "mod": "cal"
+   }
+  ]
+ },
+ {
+  "group": "Franchise",
+  "items": [
+   {
+    "key": "franchise",
+    "label": "Franchise management",
+    "mod": "franchise"
+   }
+  ]
+ },
+ {
+  "group": "Compliance",
+  "items": [
+   {
+    "key": "udise",
+    "label": "UDISE+ & compliance",
+    "mod": "udise"
+   }
+  ]
+ },
+ {
+  "group": "Communication",
+  "items": [
+   {
+    "key": "cmc",
+    "label": "Communication centre",
+    "mod": "cmc"
+   },
+   {
+    "key": "ealerts",
+    "label": "Emergency alerts",
+    "mod": "ema"
+   },
+   {
+    "key": "surveys",
+    "label": "Parent surveys",
+    "mod": "svy"
+   }
+  ]
+ },
+ {
+  "group": "Admissions CRM",
+  "items": [
+   {
+    "key": "crm_home",
+    "label": "CRM",
+    "mod": "crm_home"
+   },
+   {
+    "key": "adp",
+    "label": "Tests & seat offers",
+    "mod": "adp"
+   }
+  ]
+ },
+ {
+  "group": "IT Management",
+  "items": [
+   {
+    "key": "it_home",
+    "label": "IT Management",
+    "mod": "it_home"
+   },
+   {
+    "key": "it_mgr_app",
+    "label": "IT Manager App",
+    "mod": ""
+   },
+   {
+    "key": "it_tech_app",
+    "label": "IT Technician App",
+    "mod": ""
+   }
+  ]
+ },
+ {
+  "group": "Legal & Compliance",
+  "items": [
+   {
+    "key": "lc_home",
+    "label": "Compliance dashboard",
+    "mod": "lc_home"
+   },
+   {
+    "key": "lc_register",
+    "label": "Document register",
+    "mod": "lc_register"
+   },
+   {
+    "key": "lc_cal",
+    "label": "Compliance calendar",
+    "mod": "lc_cal"
+   },
+   {
+    "key": "lc_renew",
+    "label": "Renewals & filings",
+    "mod": "lc_renew"
+   },
+   {
+    "key": "lc_cases",
+    "label": "Cases & notices",
+    "mod": "lc_cases"
+   },
+   {
+    "key": "lc_reports",
+    "label": "Legal reports",
+    "mod": "lc_reports"
+   },
+   {
+    "key": "lc_setup",
+    "label": "Setup",
+    "mod": "lc_setup"
+   },
+   {
+    "key": "lc_audit",
+    "label": "Audit trail",
+    "mod": "lc_audit"
+   }
+  ]
+ },
+ {
+  "group": "Payroll",
+  "items": [
+   {
+    "key": "py_home",
+    "label": "Payroll dashboard",
+    "mod": "py_home"
+   },
+   {
+    "key": "py_run",
+    "label": "Payroll processing",
+    "mod": "py_run"
+   },
+   {
+    "key": "py_salary",
+    "label": "Salary structures",
+    "mod": "py_salary"
+   },
+   {
+    "key": "py_bank",
+    "label": "Staff bank information",
+    "mod": "py_bank"
+   },
+   {
+    "key": "py_reports",
+    "label": "Payroll reports",
+    "mod": "py_reports"
+   },
+   {
+    "key": "py_statutory",
+    "label": "Statutory files",
+    "mod": "py_reports"
+   },
+   {
+    "key": "gratuity",
+    "label": "Gratuity",
+    "mod": "grat"
+   },
+   {
+    "key": "psd_home",
+    "label": "Salary release",
+    "mod": "psd_home"
+   },
+   {
+    "key": "psd_me",
+    "label": "My salary status",
+    "mod": "psd_me"
+   }
+  ]
+ },
+ {
+  "group": "AI Assistant",
+  "items": [
+   {
+    "key": "ai_chat",
+    "label": "AI Assistant",
+    "mod": ""
+   },
+   {
+    "key": "ai_admin",
+    "label": "AI Control Centre",
+    "mod": ""
+   }
+  ]
+ },
+ {
+  "group": "Admin control centre",
+  "items": [
+   {
+    "key": "sa_home",
+    "label": "Super Admin dashboard",
+    "mod": "sa_home"
+   },
+   {
+    "key": "admin_home",
+    "label": "Overview",
+    "mod": "admin_home"
+   },
+   {
+    "key": "admin_users",
+    "label": "Users",
+    "mod": "admin_users"
+   },
+   {
+    "key": "admin_roles",
+    "label": "Roles & permissions",
+    "mod": "admin_roles"
+   },
+   {
+    "key": "hierarchy",
+    "label": "Organisation & directors",
+    "mod": "admin_mapping"
+   },
+   {
+    "key": "admin_mapping",
+    "label": "Data scope mapping",
+    "mod": "admin_mapping"
+   },
+   {
+    "key": "sa_access",
+    "label": "Access & sensitive data",
+    "mod": "sa_access"
+   },
+   {
+    "key": "sa_rules",
+    "label": "Data access rules",
+    "mod": "sa_rules"
+   },
+   {
+    "key": "sa_modules",
+    "label": "Module control",
+    "mod": "sa_modules"
+   },
+   {
+    "key": "sa_workflows",
+    "label": "Approval workflows",
+    "mod": "sa_workflows"
+   },
+   {
+    "key": "sa_requests",
+    "label": "Access requests",
+    "mod": "sa_requests"
+   },
+   {
+    "key": "masters",
+    "label": "Category masters",
+    "mod": "masters"
+   },
+   {
+    "key": "admin_email",
+    "label": "Email distribution",
+    "mod": "admin_email"
+   },
+   {
+    "key": "admin_sync",
+    "label": "ERP sync",
+    "mod": "admin_sync"
+   },
+   {
+    "key": "srf_sysadmin",
+    "label": "SRF settings & mapping",
+    "mod": ""
+   },
+   {
+    "key": "pr_admin",
+    "label": "Store & purchase settings",
+    "mod": "pr_admin"
+   },
+   {
+    "key": "as_admin",
+    "label": "Asset control centre",
+    "mod": "as_admin"
+   },
+   {
+    "key": "cb_admin",
+    "label": "Petty cash control centre",
+    "mod": "cb_admin"
+   },
+   {
+    "key": "ut_admin",
+    "label": "Utilities control centre",
+    "mod": "ut_admin"
+   },
+   {
+    "key": "rm_admin",
+    "label": "Rent control centre",
+    "mod": "rm_admin"
+   },
+   {
+    "key": "fn_admin",
+    "label": "Finance control centre",
+    "mod": "fn_admin"
+   },
+   {
+    "key": "br_admin",
+    "label": "Bank reconciliation control centre",
+    "mod": "br_admin"
+   },
+   {
+    "key": "hr_admin",
+    "label": "HR control centre",
+    "mod": "hr_admin"
+   },
+   {
+    "key": "audit",
+    "label": "Audit log",
+    "mod": "audit"
+   },
+   {
+    "key": "sa_reports",
+    "label": "Access & security reports",
+    "mod": "sa_reports"
+   }
+  ]
+ }
+]

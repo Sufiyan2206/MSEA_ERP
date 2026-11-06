@@ -1,0 +1,12 @@
+.env
+*.pyc
+__pycache__/
+backend/.pytest_cache/
+frontend/node_modules/
+frontend/dist/
+deploy/oci/terraform/.terraform/
+deploy/oci/terraform/*.tfstate*
+deploy/oci/terraform/prod.tfvars
+deploy/oci/terraform/certs/
+frontend/public/legacy/
+.venv
