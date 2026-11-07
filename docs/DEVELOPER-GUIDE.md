@@ -11,7 +11,7 @@ git clone … msea-erp && cd msea-erp
 cd backend && python -m venv .venv && . .venv/bin/activate && pip install -r requirements-dev.txt
 cp .env.example .env   # edit DATABASE_URL, SECRET_KEY, JWT_SECRET
 alembic upgrade head && python -m scripts.seed
-flask --app wsgi run --port 8000 --debug
+flask --app wsgi run --port 5000 --debug
 cd ../frontend && npm install && npm run dev
 ```
 `.env` is read by `python-dotenv` only if you `export $(cat .env | xargs)` or use docker-compose; for plain `flask run` export the variables (or use `direnv`).
@@ -106,7 +106,7 @@ Use this table first; §8 has the database ones.
 | `sqlite3.InterfaceError: bad parameter or other API misuse` (local dev only) | SQLite + threads | Shared connection across threads | Only `:memory:` uses StaticPool now; use a file DB (`sqlite:///dev.db`) or MySQL. Never SQLite in production. |
 | Legacy screen shows "This screen hit an error: …" | browser console, the module file named in the stack | JS exception inside the original module | Fix in `frontend/legacy/src/<module>.js`, rebuild; the error text is the original module's message. |
 | Legacy screen: "The change could not be saved: conflict" | `/legacy/docs/<key>` 409 | Another user saved the same document first | Expected; the fresh copy is loaded, redo the change. Frequent conflicts on one document = port that module natively (row-level tables). |
-| `/app/...` shows "Could not load. Route not found" or "API server is an older version" | `GET /api/v1/legacy/bootstrap` → 404 | The Flask process was started from an older copy of the backend (no `legacy` blueprint) | Stop the old API; from **this** package: `cd backend && alembic upgrade head && python -m scripts.seed --no-demo && flask --app wsgi run --port 8000`. Check `flask --app wsgi routes \| grep legacy` lists 8 routes. |
+| `/app/...` shows "Could not load. Route not found" or "API server is an older version" | `GET /api/v1/legacy/bootstrap` → 404 | The Flask process was started from an older copy of the backend (no `legacy` blueprint) | Stop the old API; from **this** package: `cd backend && alembic upgrade head && python -m scripts.seed --no-demo && flask --app wsgi run --port 5000`. Check `flask --app wsgi routes \| grep legacy` lists 8 routes. |
 | `/app/...` shows "failed /legacy/vendor/…" or unstyled buttons in dev | `GET /legacy/legacy.css` returns HTML | `public/legacy` missing when the dev server started | Fixed: `vite.config.ts` builds the runtime before Vite indexes `public/`. On older copies: stop Vite, run `node legacy/build-legacy.mjs`, start Vite again. |
 | `failed to load config from …\vite.config.ts` / `Command failed: node … build-legacy.mjs` (Windows) | the lines printed above the error | Older build script used `URL.pathname` (gives `/D:/…` on Windows) | Fixed: `build-legacy.mjs` uses `fileURLToPath` and normalises CRLF. Run `node legacy/build-legacy.mjs` alone to see any remaining reason. Since this version a build failure never stops Vite: the console prints `[build-legacy] FAILED while <step>: <reason>` and the same text appears on module screens (`public/legacy/BUILD-ERROR.txt`). |
 | `/app/...` shows "Loading module…" forever | Network tab: `/legacy/legacy-app.js` or `/legacy/bootstrap` | Bundle not built (`public/legacy` missing) or `legacy:View` missing on the role | `npm run build` (runs the builder); give the role `legacy` View/Add (seed or Admin → Roles). |

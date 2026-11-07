@@ -39,13 +39,14 @@ cd backend && pip install -r requirements-dev.txt
 export DATABASE_URL=sqlite:///dev.db            # or your MySQL URL
 alembic upgrade head                            # create schema
 python -m scripts.seed                          # roles + demo data (users below)
-flask --app wsgi run --port 8000                # API on :8000 (SCHEDULER_ENABLED=1 by default)
+flask --app wsgi run --port 5000              # API on :5000 (SCHEDULER_ENABLED=1 by default)
 # frontend
-cd ../frontend && npm install && npm run dev    # http://localhost:5173 (proxies /api to :8000)
+cd ../frontend && npm install && npm run dev    # http://localhost:5173 (proxies /api to :5000)
 ```
 
 Demo logins (password `Msea@12345`, forced change at first login): `superadmin`, `ceo`, `cfo`, `hr`, `finance`, `auditor`, `sysadmin`,
 `principal.hyd`, `accountant.hyd`, `cashier.hyd`, `counsellor.hyd`, `teacher.hyd` (same for `.sec`, `.blr`, `.mum`), `parent.demo`.
+There is no seeded `admin` username; use `superadmin` for the local demo administrator account.
 
 With Docker: `cd deploy/docker && cp ../../backend/.env.example .env && docker compose up -d --build` → http://localhost (MySQL included).
 

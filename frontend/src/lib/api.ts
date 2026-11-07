@@ -24,7 +24,7 @@ async function request<T>(method: string, path: string, body?: unknown, raw = fa
   } catch {
     throw new ApiError(0, "network", "You are offline or the server is unreachable.");
   }
-  if (res.status === 401) {
+  if (res.status === 401 && path !== "/auth/login") {
     useAuth.getState().logout();
     throw new ApiError(401, "unauthorized", "Session expired. Please sign in again.");
   }
