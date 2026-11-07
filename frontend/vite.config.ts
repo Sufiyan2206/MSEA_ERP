@@ -65,6 +65,12 @@ export default defineConfig({
     if (selector.startsWith(":root")) return selector;
     // exclude the legacy runtime subtree (.lg) so platform styles never leak into legacy screens
     const m = prefixed.match(/^(.*?)(::[a-z-]+)?$/); return `${m![1]}:not(.lg *)${m![2] ?? ""}`; } }) as never] } },
-  server: { port: 5173, proxy: { "/api": "http://127.0.0.1:8000", "/health": "http://127.0.0.1:8000" } },
+  server: {
+  port: 5173,
+  proxy: {
+    "/api": "http://127.0.0.1:5000",
+    "/health": "http://127.0.0.1:5000"
+  }
+},
   build: { sourcemap: false, target: "es2020" }
 });

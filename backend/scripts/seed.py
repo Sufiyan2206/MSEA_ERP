@@ -10,6 +10,7 @@ Default users (password `Msea@12345`, forced change on first login):
 """
 import random
 import sys
+from dotenv import load_dotenv
 from datetime import date, timedelta
 
 from app import create_app
@@ -77,6 +78,7 @@ def user(s, roles, username, name, role, branch=None, **kw):
 
 
 def main(demo=True):
+    load_dotenv()
     app = create_app()
     with app.app_context(), session_scope() as s:
         roles = upsert_roles(s); seed_rules(s)

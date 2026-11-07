@@ -5,6 +5,9 @@ Nothing secret is hard-coded; defaults are only for local development.
 """
 import os
 from datetime import timedelta
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 class Config:
@@ -15,7 +18,7 @@ class Config:
     # MySQL in every real environment; SQLite only for unit tests.
     DATABASE_URL = os.getenv(
         "DATABASE_URL",
-        "mysql+pymysql://msea:msea@127.0.0.1:3306/msea?charset=utf8mb4",
+        "mysql+pymysql://WMS:WMS123@127.0.0.1:3307/msea_erp?charset=utf8mb4",
     )
     SQL_ECHO = os.getenv("SQL_ECHO", "0") == "1"
     CORS_ORIGINS = [o.strip() for o in os.getenv("CORS_ORIGINS", "http://localhost:5173").split(",") if o.strip()]
