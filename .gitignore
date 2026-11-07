@@ -9,4 +9,7 @@ deploy/oci/terraform/*.tfstate*
 deploy/oci/terraform/prod.tfvars
 deploy/oci/terraform/certs/
 frontend/public/legacy/
-.venv
+
+*.db
+.venv/
+backend/.venv/

@@ -23,7 +23,7 @@ export default function LegacyHost() {
     return () => { alive = false; };
   }, [page]);
   return <div className="lg" ref={root} data-ready={ready ? "1" : "0"}>
-    {err ? <div className="card" style={{ margin: "1rem", borderColor: "var(--err)" }}><b>Module runtime could not start.</b><div style={{ marginTop: ".4rem" }}>{err instanceof Error ? err.message : String(err)}</div><div className="small muted" style={{ marginTop: ".4rem" }}>See docs/DEVELOPER-GUIDE.md § legacy runtime.</div></div> : null}
+    {err ? <div className="card" style={{ margin: "1rem", borderColor: "var(--err)" }}><b>Module runtime could not start.</b><pre style={{ marginTop: ".4rem", whiteSpace: "pre-wrap", fontSize: ".85rem" }}>{err instanceof Error ? err.message : String(err)}</pre><div className="small muted" style={{ marginTop: ".4rem" }}>See docs/DEVELOPER-GUIDE.md § legacy runtime.</div></div> : null}
     {!ready && !err && <Loading />}
     <div className="lgbar"><button className="gbtn menu-btn2" data-act="toggleNav" aria-label="Open module menu">☰ Modules</button><div className="gsearch"><input id="gsearch" type="search" list="gsl" placeholder="Search screens and modules…" aria-label="Search screens" autoComplete="off" /><datalist id="gsl" /></div><div id="sync" className="syncchip" /><div id="who" /></div>
     <div className="app">

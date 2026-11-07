@@ -140,8 +140,14 @@ export async function ensureLegacy(initialPage: string, rootEl: HTMLElement): Pr
     if (!scriptsPromise) {
       scriptsPromise = (async () => {
         if (!document.getElementById("lg-css")) { const l = document.createElement("link"); l.id = "lg-css"; l.rel = "stylesheet"; l.href = "/legacy/legacy.css"; document.head.appendChild(l); }
-        for (const v of ["chart.umd.js", "xlsx.full.min.js", "jspdf.umd.min.js", "jspdf.plugin.autotable.min.js", "qrcode.js"]) await loadScript("/legacy/vendor/" + v);
-        await loadScript("/legacy/legacy-app.js");
+        try {
+          for (const v of ["chart.umd.js", "xlsx.full.min.js", "jspdf.umd.min.js", "jspdf.plugin.autotable.min.js", "qrcode.js"]) await loadScript("/legacy/vendor/" + v);
+          await loadScript("/legacy/legacy-app.js");
+        } catch (e) {
+          scriptsPromise = null;
+          const why = await fetch("/legacy/BUILD-ERROR.txt").then((r) => r.ok && !(r.headers.get("content-type") ?? "").includes("html") ? r.text() : "").catch(() => "");
+          throw new Error(why ? "The module runtime was not built:\n" + why : "The module runtime files are missing (" + (e as Error).message + "). Stop the dev server, run `node legacy/build-legacy.mjs` in the frontend folder, then start `npm run dev` again.");
+        }
       })();
     }
     await scriptsPromise;

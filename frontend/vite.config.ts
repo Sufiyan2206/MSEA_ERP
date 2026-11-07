@@ -4,7 +4,7 @@ import { VitePWA } from "vite-plugin-pwa";
 import path from "node:path";
 import fs from "node:fs";
 import prefixer from "postcss-prefix-selector";
-import { execFileSync } from "node:child_process";
+import { spawnSync } from "node:child_process";
 
 // API calls go to /api/v1 on the same origin; nginx (deploy/nginx) proxies them to Flask.
 /** Build the legacy module runtime (public/legacy) while the config loads — i.e. BEFORE Vite indexes
@@ -16,7 +16,15 @@ import { execFileSync } from "node:child_process";
   const inputs = [...fs.readdirSync(srcDir).map((f) => path.join(srcDir, f)), path.resolve(__dirname, "legacy/build-legacy.mjs")];
   const outTime = fs.existsSync(out) ? fs.statSync(out).mtimeMs : 0;
   const stale = !fs.existsSync(path.resolve(__dirname, "public/legacy/vendor/qrcode.js")) || inputs.some((f) => fs.statSync(f).mtimeMs > outTime);
-  if (stale) execFileSync(process.execPath, [path.resolve(__dirname, "legacy/build-legacy.mjs")], { stdio: "inherit" });
+  const errFile = path.resolve(__dirname, "public/legacy/BUILD-ERROR.txt");
+  if (!stale) return;
+  // Never block Vite: if the module build fails, native screens still run and module screens show the reason.
+  const r = spawnSync(process.execPath, [path.resolve(__dirname, "legacy/build-legacy.mjs")], { encoding: "utf8" });
+  if (r.stdout) process.stdout.write(r.stdout);
+  if (r.status === 0) { if (fs.existsSync(errFile)) fs.rmSync(errFile); return; }
+  const msg = (r.stderr || "") + (r.error ? String(r.error) : "") || "unknown error (exit " + r.status + ")";
+  console.error("\n[msea] Module runtime build FAILED. Native screens will work; module screens (/app/...) will show this message.\n" + msg);
+  fs.mkdirSync(path.dirname(errFile), { recursive: true }); fs.writeFileSync(errFile, msg);
 })();
 
 export default defineConfig({
