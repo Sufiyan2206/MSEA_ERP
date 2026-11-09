@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="MyLearnSpace">
+  <polygon points="32,5 57,19 57,45 32,59 7,45 7,19" fill="#c74634" stroke="#c74634" stroke-width="8" stroke-linejoin="round"/>
+  <g transform="translate(-1.6 0)" fill="none" stroke="#ffffff" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12.5 41 V23 L18 33 L23.5 23 V41"/>
+    <path d="M29.5 23 V41 H37.5"/>
+    <path d="M54 27.5 C54 22 44 22 44 27.8 C44 33.5 54.5 31.5 54.5 37.6 C54.5 43.4 44 43 43.5 38"/>
+  </g>
+</svg>

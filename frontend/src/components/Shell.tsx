@@ -44,8 +44,8 @@ export default function Shell() {
     <div className="shell">
       <header className="topbar">
         <button className="icon menu-toggle" aria-label="Toggle navigation" onClick={() => setDrawer(!drawer)}>☰</button>
-        <button className="brand-lockup" onClick={() => nav("/")} aria-label="Eduvia home">
-          <img className="brand-logo" src="/icons/eduvia-mark.png" alt="" /><span className="brand-copy"><strong>Eduvia</strong><small>A Smarter Pathway to Education</small></span>
+        <button className="brand-lockup" onClick={() => nav("/")} aria-label="MyLearnSpace home">
+          <img className="brand-logo" src="/icons/mls-mark.svg" alt="" /><span className="brand-copy"><strong><span className="b-my">My</span>Learn<span className="b-sp">Space</span></strong><small>A Smarter Pathway to Education</small></span>
         </button>
         <button className="global-search" onClick={() => nav("/search")} aria-label="Open search"><span>⌕</span><span>Search students, fees, modules...</span><kbd>⌘ K</kbd></button>
         <div className={`connection-state ${online ? "is-online" : "is-offline"}`}><i />{online ? "System online" : "Offline"}</div>

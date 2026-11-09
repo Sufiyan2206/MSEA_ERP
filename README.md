@@ -1,4 +1,4 @@
-# Eduvia — MS Education Academy
+# MyLearnSpace (MLS) — MS Education Academy
 
 Multi-branch school ERP rebuilt on a production stack:
 

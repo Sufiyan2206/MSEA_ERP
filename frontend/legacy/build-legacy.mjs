@@ -47,7 +47,7 @@ const PATCHES = [
   ["const h = (location.hash || '').slice(1); if (PAGES[h]) App.route = h;", "const h = window.MSEA_BRIDGE.initialPage(); if (PAGES[h]) App.route = h;", 1],
   ["const id = LS.get('user'); const u = (id && userById(id)) || users().find(x => x.role === 'CFO');", "const id = window.MSEA_BRIDGE.legacyUserId() || (window.MSEA_BRIDGE.canSwitchUser() ? LS.get('user') : null); const u = (id && userById(id)) || users().find(x => x.role === window.MSEA_BRIDGE.platformRole() && x.status === 'Active') || users().find(x => x.role === 'CFO');", 1],
   ["$('#who').innerHTML = `<label class=\"fld whosel\"><span>Signed in as (demo)</span>", "$('#who').innerHTML = !window.MSEA_BRIDGE.canSwitchUser() ? `<span class=\"whoname\">${esc(App.user.name.replace(' (demo)', ''))} · ${esc(App.user.role)}</span>` : `<label class=\"fld whosel\"><span>Acting as (Super Admin test mode)</span>", 1],
-  ["$('#mode').textContent = Store.mode === 'shared' ? (Store.writable ? 'Shared workspace' : 'Shared workspace · view only') : 'Local preview – changes are not saved';", "$('#mode').textContent = Store.mode === 'shared' ? (Store.writable ? 'Saved to Eduvia database' : 'View only') : 'Connecting…';", 1],
+  ["$('#mode').textContent = Store.mode === 'shared' ? (Store.writable ? 'Shared workspace' : 'Shared workspace · view only') : 'Local preview – changes are not saved';", "$('#mode').textContent = Store.mode === 'shared' ? (Store.writable ? 'Saved to MyLearnSpace database' : 'View only') : 'Connecting…';", 1],
 ];
 
 step = "reading legacy/data/branches.json";

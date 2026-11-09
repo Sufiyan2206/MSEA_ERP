@@ -13,7 +13,7 @@ export default function Login() {
     catch (ex) { setErr(ex instanceof ApiError ? ex.message : "Login failed"); } finally { setBusy(false); }
   };
   return <div className="login"><form className="card" onSubmit={submit}>
-    <div><h1>Eduvia</h1><div className="muted small">MS Education Academy · sign in with your staff account</div></div>
+    <div><img src="/icons/mls-mark.svg" alt="" width="52" height="52" style={{ display: "block", marginBottom: ".5rem" }} /><h1><span style={{ fontWeight: 400 }}>My</span>Learn<span style={{ color: "var(--accent)" }}>Space</span></h1><div className="muted small">MS Education Academy · sign in with your staff account</div></div>
     <Field label="Username"><input value={u} onChange={(e) => setU(e.target.value)} autoComplete="username" autoFocus required /></Field>
     <Field label="Password"><input type="password" value={p} onChange={(e) => setP(e.target.value)} autoComplete="current-password" required /></Field>
     {err && <div className="pill err">{err}</div>}
