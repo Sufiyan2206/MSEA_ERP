@@ -230,3 +230,16 @@ h3 { letter-spacing: .055em; font-size: .72rem; color: var(--muted); }
   .menu-toggle { width: 34px !important; flex-basis: 34px !important; }
   .grid { grid-template-columns: 1fr; }
 }
+
+/* Two-level sidebar: group rail + item panel (no scrolling for the nav) */
+.side { flex-direction: row; padding: 0; }
+.side .rail { flex: 0 0 64px; width: 64px; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: .7rem 0; background: rgba(8, 20, 70, .28); border-right: 1px solid rgba(237,242,255,.14); }
+.side .rail-btn { width: 54px; min-height: 56px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; border: 0; border-radius: 10px; background: transparent; color: #d7e1ff; cursor: pointer; }
+.side .rail-btn .rail-ic { font-size: 1.2rem; line-height: 1; font-weight: 700; }
+.side .rail-btn small { font-size: .62rem; font-weight: 600; letter-spacing: .01em; }
+.side .rail-btn:hover { background: rgba(255,255,255,.1); color: #fff; }
+.side .rail-btn.on { background: rgba(255,255,255,.2); color: #fff; box-shadow: inset 3px 0 0 #9fbaff; }
+.side .panel { flex: 1; min-width: 0; overflow-y: auto; padding: .9rem .6rem; }
+.side .panel .grp { margin: 0 .5rem .6rem; }
+/* keep rail + panel side by side inside the mobile / module-mode drawer */
+.body .side.open, .body.lg-mode .side.open { display: flex; }
