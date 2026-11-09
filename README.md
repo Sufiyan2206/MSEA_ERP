@@ -1,4 +1,4 @@
-# MSEA ERP — MS Education Academy
+# Eduvia — MS Education Academy
 
 Multi-branch school ERP rebuilt on a production stack:
 

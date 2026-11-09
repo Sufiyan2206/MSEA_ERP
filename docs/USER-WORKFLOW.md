@@ -1,6 +1,6 @@
 # How the application works — end-user workflow
 
-MSEA ERP runs in any browser and installs on Android/iPhone as an app (open the site in Chrome → menu → *Add to Home screen*). Phones show a bottom bar (Home · Collect/Attend · Gaps · Alerts) and a drawer menu (☰); desktops show the side menu. Everything you can do depends on your **role** and your **branch**; what you cannot do is hidden, and the server blocks it anyway.
+Eduvia runs in any browser and installs on Android/iPhone as an app (open the site in Chrome → menu → *Add to Home screen*). Phones show a bottom bar (Home · Collect/Attend · Gaps · Alerts) and a drawer menu (☰); desktops show the side menu. Everything you can do depends on your **role** and your **branch**; what you cannot do is hidden, and the server blocks it anyway.
 
 ## 1. Signing in
 1. Open the app → username + password (given by the System Admin).
@@ -65,7 +65,7 @@ Each role gets a daily and monthly checklist per branch (e.g. cashier: open coun
 * **Search** (🔍): students, receipts, enquiries, employees, gaps in one box.
 
 ## 10. All other modules (Modules directory)
-Menu → **All modules** lists every screen of the complete application (24 areas: strength & admissions, finance, SRF incentives, store & purchase, assets, petty cash, utilities, bank reconciliation, HR, maintenance, student information, academics, planner, franchise, compliance, communication, admissions CRM, IT, legal, payroll, AI assistant, admin control centre). These open with the module's own left menu and filters exactly as before; your role decides what you see inside. Changes are saved to the central database immediately (the status line reads "Saved to MSEA ERP database"). If a colleague changed the same record moments before you, the screen reloads their version and asks you to redo your change.
+Menu → **All modules** lists every screen of the complete application (24 areas: strength & admissions, finance, SRF incentives, store & purchase, assets, petty cash, utilities, bank reconciliation, HR, maintenance, student information, academics, planner, franchise, compliance, communication, admissions CRM, IT, legal, payroll, AI assistant, admin control centre). These open with the module's own left menu and filters exactly as before; your role decides what you see inside. Changes are saved to the central database immediately (the status line reads "Saved to Eduvia database"). If a colleague changed the same record moments before you, the screen reloads their version and asks you to redo your change.
 
 ## 11. Administration (System Admin)
 Admin → Users: create (initial password, role, branch), lock/unlock, reset password, access mappings (zone/region/state/selected branches with validity). Admin → Roles: permission grid per module × action (View, Add, Edit, Verify, Approve, Reject, Delete, Export, Configure Settings) with a mandatory reason. Audit log: filter by module, open any entry to see before/after; Email log shows every simulated/sent email.

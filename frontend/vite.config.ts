@@ -34,7 +34,7 @@ export default defineConfig({
       registerType: "autoUpdate",
       includeAssets: ["icons/icon-192.png", "icons/icon-512.png"],
       manifest: {
-        name: "MSEA ERP",
+        name: "Eduvia",
         short_name: "MSEA",
         description: "MS Education Academy ERP — fees, admissions, attendance, HR, gaps",
         theme_color: "#0f4c81",

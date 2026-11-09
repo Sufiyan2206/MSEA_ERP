@@ -1,4 +1,4 @@
-# MSEA ERP on OCI — single-region, production-sized but modest:
+# Eduvia on OCI — single-region, production-sized but modest:
 #   VCN (public + private subnets) · Load Balancer (HTTPS) · 2× compute VMs running docker compose (web+api, scheduler)
 #   MySQL HeatWave DB System (private subnet) · Object Storage bucket (uploads/backups) · NSGs
 # terraform init && terraform apply -var-file=prod.tfvars
